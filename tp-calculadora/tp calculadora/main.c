@@ -78,8 +78,8 @@ int main()
                 printf("\n el resultado de la resta %.2f-%.2f es: %.2f",num1,num2,resultadoResta);
                 printf("\n el resultado de la multiplicacion %.2f*%.2f es: %f",num1,num2,resultadoMultiplicacion);
                 printf("\n el resultado de la division %.2f/%.2f es: %.2f",num1,num2,resultadoDivision);
-                printf("\n el resultado factorial de %.2f es: %d ",num1,resultadoFactorial);
-                printf("y el resultado factorial de %.2f es: %d",num2,resultadoFactorial2);
+                printf("\n el resultado factorial de %.0f es: %d ",num1,resultadoFactorial);
+                printf("y el resultado factorial de %.0f es: %d",num2,resultadoFactorial2);
                 break;
                 }
                 else{
