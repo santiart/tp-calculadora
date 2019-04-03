@@ -110,3 +110,14 @@
 
 1554292225 d:\aguadosantiago\tp-calculadora\tp calculadora\factorial.h
 
+1554318956 source:c:\users\juan\desktop\tp-calculadora\tp-calculadora\tp calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+	"operaciones.h"
+
+1554318203 c:\users\juan\desktop\tp-calculadora\tp-calculadora\tp calculadora\operaciones.h
+	<stdio.h>
+	<stdlib.h>
+
+1554316769 source:c:\users\juan\desktop\tp-calculadora\tp-calculadora\tp calculadora\operaciones.c
+

@@ -5,12 +5,12 @@
 
 int main()
 {
-    int num1;//primer operando
-    int num2;//segundo operando
+    float num1;//primer operando
+    float num2;//segundo operando
     int opcion;
-    int resultadoSuma;
-    int resultadoResta;
-    int resultadoMultiplicacion;
+    float resultadoSuma;
+    float resultadoResta;
+    float resultadoMultiplicacion;
     float resultadoDivision;
     int resultadoFactorial;
     int resultadoFactorial2;
@@ -32,24 +32,19 @@ int main()
             flagnumeros=1;
             fflush(stdin);
             printf("ingrese el primer numero: ");
-            scanf("%d",&num1);
+            scanf("%f",&num1);
             break;
-        case 2://ingreso del segundo numeroint obtenerSuma(int x, int y)
-{
-    int suma;
-    suma=x+y;
-    return suma;
-}
+        case 2://ingreso del segundo numero
 
             flag=1;
             if(flagnumeros==1){//si no se ingresa un primer numero, impedimos el ingreso del segundo
             fflush(stdin);
             printf("ingrese el segundo numero: ");
-            scanf("%d",&num2);
+            scanf("%f",&num2);
             break;
             }
             else{
-                printf("error, primero ingrese la opcion 1...");
+                printf("ERROR, primero ingrese la opcion 1...");
                 break;
             }
         case 3://calculo de las operaciones
@@ -65,30 +60,37 @@ int main()
                 break;
                 }
                 else{
-                printf("error, el segundo operando no puede ser 0");
+                printf("ERROR, el segundo operando no puede ser 0");
                 break;
                 }
             break;
             }
             else{
-                printf("error, ingrese primero los dos operandos...");
+                printf("ERROR, ingrese primero los dos operandos...");
                 break;
             }
             break;
         case 4://mostrar las respuestas de los calculos
             if(flagcalculos==1)//si no presiona la opcion 3, no se van a ejecutar ni se mostraran los calculos
             {
-                printf("\n el resultado de la suma %d+%d es: %d",num1,num2,resultadoSuma);
-                printf("\n el resultado de la resta %d-%d es: %d",num1,num2,resultadoResta);
-                printf("\n el resultado de la multiplicacion %d*%d es: %d",num1,num2,resultadoMultiplicacion);
-                printf("\n el resultado de la division %d/%d es: %.2f",num1,num2,resultadoDivision);
-                printf("\n el resultado factorial de %d es: %d ",num1,resultadoFactorial);
-                printf("y el resultado factorial de %d es: %d",num2,resultadoFactorial2);
+                if(num2!=0){
+                printf("\n el resultado de la suma %.2f+%.2f es: %.2f",num1,num2,resultadoSuma);
+                printf("\n el resultado de la resta %.2f-%.2f es: %.2f",num1,num2,resultadoResta);
+                printf("\n el resultado de la multiplicacion %.2f*%.2f es: %f",num1,num2,resultadoMultiplicacion);
+                printf("\n el resultado de la division %.2f/%.2f es: %.2f",num1,num2,resultadoDivision);
+                printf("\n el resultado factorial de %.2f es: %d ",num1,resultadoFactorial);
+                printf("y el resultado factorial de %.2f es: %d",num2,resultadoFactorial2);
                 break;
+                }
+                else{
+                    printf("\n ERROR, no se puede llevar a cabo la funcion 3...");
+                    //ningun calculo se mpostrara si el segundo operando es 0
+                    break;
+                }
             }
             else
             {
-                printf("error, primero elija la opcion 3...");
+                printf("ERROR, primero elija la opcion 3...");
                 break;
             }
             break;
@@ -103,3 +105,4 @@ int main()
     }while(opcion!=5);//ejecutar el programa hasta que se seleccione la opcion de salida (5)
     return 0;
 }
+

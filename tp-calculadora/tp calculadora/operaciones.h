@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-float obtenerDivision(int x, int y)
+float obtenerDivision(float x, float y)
 {
-    float resta;
+    float division;
     if(y!=0)
     {
-        resta=(float)x/y;
+        division=(float)x/y;
 
     }
     else{
         printf("no se puede dividir por 0 \n" );
     }
-        return resta;
+        return division;
 }
 
 
@@ -29,24 +29,24 @@ int obtenerFactorial(int x)
 }
 
 
-int obtenerMultiplicacion(int x, int y)
+float obtenerMultiplicacion(float x, float y)
 {
-    int multiplicacion;
-    multiplicacion=x*y;
+    float multiplicacion;
+    multiplicacion=(float)x*y;
     return multiplicacion;
 }
 
 
-int obtenerResta(int x, int y)
+float obtenerResta(float x, float y)
 {
-    int resta;
-    resta=x-y;
+    float resta;
+    resta=(float)x-y;
     return resta;
 }
 
-int obtenerSuma(int x, int y)
+float obtenerSuma(float x, float y)
 {
-    int suma;
-    suma=x+y;
+    float suma;
+    suma=(float)x+y;
     return suma;
 }
