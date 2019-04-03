@@ -57,6 +57,11 @@ int main()
             flagcalculos=1;
             if(flag==1) //impedir la ejecucion de los calculos si no se ingresaron los dos operandos
             {
+                    resultadoSuma=obtenerSuma(num1,num2);
+                    resultadoResta=obtenerResta(num1,num2);
+                    resultadoMultiplicacion=obtenerMultiplicacion(num1,num2);
+                    resultadoFactorial=obtenerFactorial(num1);
+                    resultadoFactorial2=obtenerFactorial(num2);
                 if(num2!=0)
                 {
                     resultadoDivision=obtenerDivision(num1,num2);
@@ -64,15 +69,10 @@ int main()
                 }
                 else
                 {
-                    printf("ERROR, el segundo operando no puede ser 0");
+                    printf("Advertencia, no se mostrara la division si el segundo numero es 0...");
                     break;
                 }
                 break;
-                    resultadoSuma=obtenerSuma(num1,num2);
-                    resultadoResta=obtenerResta(num1,num2);
-                    resultadoMultiplicacion=obtenerMultiplicacion(num1,num2);
-                    resultadoFactorial=obtenerFactorial(num1);
-                    resultadoFactorial2=obtenerFactorial(num2);
             }
             else
             {
@@ -83,6 +83,11 @@ int main()
         case 4://mostrar las respuestas de los calculos
             if(flagcalculos==1)//si no presiona la opcion 3, no se van a ejecutar ni se mostraran los calculos
             {
+                    printf("\n el resultado de la suma %.2f+%.2f es: %.2f",num1,num2,resultadoSuma);
+                    printf("\n el resultado de la resta %.2f-%.2f es: %.2f",num1,num2,resultadoResta);
+                    printf("\n el resultado de la multiplicacion %.2f*%.2f es: %f",num1,num2,resultadoMultiplicacion);
+                    printf("\n el resultado factorial de %.0f es: %d ",num1,resultadoFactorial);
+                    printf("y el resultado factorial de %.0f es: %d",num2,resultadoFactorial2);
                 if(num2!=0)
                 {
                     printf("\n el resultado de la division %.2f/%.2f es: %.2f",num1,num2,resultadoDivision);
@@ -90,15 +95,10 @@ int main()
                 }
                 else
                 {
-                    printf("\n ERROR, no se puede llevar a cabo la funcion 3...");
+                    printf("\n ERROR, no se puede realizar la division con divisor 0...");
                     //ningun calculo se mpostrara si el segundo operando es 0
                     break;
                 }
-                    printf("\n el resultado de la suma %.2f+%.2f es: %.2f",num1,num2,resultadoSuma);
-                    printf("\n el resultado de la resta %.2f-%.2f es: %.2f",num1,num2,resultadoResta);
-                    printf("\n el resultado de la multiplicacion %.2f*%.2f es: %f",num1,num2,resultadoMultiplicacion);
-                    printf("\n el resultado factorial de %.0f es: %d ",num1,resultadoFactorial);
-                    printf("y el resultado factorial de %.0f es: %d",num2,resultadoFactorial2);
             }
             else
             {
