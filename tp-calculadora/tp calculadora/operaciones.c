@@ -11,7 +11,7 @@ float obtenerDivision(float x, float y)//funcion de division
 
     }
     else{
-        printf("no se puede dividir por 0 \n" );
+        printf("\n no se puede dividir por 0 \n" );
     }
         return division;
 }
@@ -22,11 +22,19 @@ int obtenerFactorial(int x)//funcion de factoreo
     //igualamos i y resultadof para que no se contemple un 0 como numero a factorear
     int i;
     int resultadof=1;
-    for(i=1;i<=x;i++)
+    if(x>0)
     {
-        resultadof=resultadof*i;
-    }
+        for(i=1;i<=x;i++)
+            {
+                resultadof=resultadof*i;
+            }
 
+
+    }
+    else
+    {
+        printf("\n no se realizara el factoreo de un numero si este es 0 o menor a 0");
+    }
     return resultadof;
 }
 

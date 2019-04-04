@@ -110,17 +110,27 @@
 
 1554292225 d:\aguadosantiago\tp-calculadora\tp calculadora\factorial.h
 
-1554322637 source:c:\users\juan\desktop\tp-calculadora\tp-calculadora\tp calculadora\main.c
+1554407337 source:c:\users\juan\desktop\tp-calculadora\tp-calculadora\tp calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+	"operaciones.h"
+	"menu.h"
+
+1554403127 c:\users\juan\desktop\tp-calculadora\tp-calculadora\tp calculadora\operaciones.h
+	<stdio.h>
+	<stdlib.h>
+
+1554407708 source:c:\users\juan\desktop\tp-calculadora\tp-calculadora\tp calculadora\operaciones.c
 	<stdio.h>
 	<stdlib.h>
 	"operaciones.h"
 
-1554322025 c:\users\juan\desktop\tp-calculadora\tp-calculadora\tp calculadora\operaciones.h
+1554405185 c:\users\juan\desktop\tp-calculadora\tp-calculadora\tp calculadora\menu.h
 	<stdio.h>
 	<stdlib.h>
 
-1554322200 source:c:\users\juan\desktop\tp-calculadora\tp-calculadora\tp calculadora\operaciones.c
+1554405638 source:c:\users\juan\desktop\tp-calculadora\tp-calculadora\tp calculadora\menu.c
 	<stdio.h>
 	<stdlib.h>
-	"operaciones.h"
+	"menu.h"
 

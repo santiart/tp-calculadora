@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "operaciones.h"
+#include "menu.h"
 //bibliotecas personales
 
 int main()
@@ -22,12 +23,8 @@ int main()
     {
         printf("              :: C A L C U L A D O R A ::              \n");
         printf("\n\n");
-        printf("Elija una Opcion:                                      \n");
-        printf(" 1_Ingresar primer numero     2_ingresar segundo numero\n");
-        printf(" 3_realizar calculos          4_mostrar resultados     \n");
-        printf(" 5_salir                                               \n");
-        fflush(stdin);
-        scanf("%d",&opcion);
+
+        opcion=Opcion(num1,num2);
         switch(opcion)
         {
         case 1://ingreso del primer numero
@@ -35,7 +32,6 @@ int main()
             fflush(stdin);
             printf("ingrese el primer numero: ");
             scanf("%f",&num1);
-            printf("ha ingresado: %.2f",num1);
             break;
         case 2://ingreso del segundo numero
 
@@ -45,7 +41,6 @@ int main()
                 fflush(stdin);
                 printf("ingrese el segundo numero: ");
                 scanf("%f",&num2);
-                printf("ha ingresado: %.2f",num2);
                 break;
             }
             else
@@ -57,22 +52,12 @@ int main()
             flagcalculos=1;
             if(flag==1) //impedir la ejecucion de los calculos si no se ingresaron los dos operandos
             {
-                    resultadoSuma=obtenerSuma(num1,num2);
-                    resultadoResta=obtenerResta(num1,num2);
-                    resultadoMultiplicacion=obtenerMultiplicacion(num1,num2);
-                    resultadoFactorial=obtenerFactorial(num1);
-                    resultadoFactorial2=obtenerFactorial(num2);
-                if(num2!=0)
-                {
-                    resultadoDivision=obtenerDivision(num1,num2);
-                    break;
-                }
-                else
-                {
-                    printf("Advertencia, no se mostrara la division si el segundo numero es 0...");
-                    break;
-                }
-                break;
+                resultadoSuma=obtenerSuma(num1,num2);
+                resultadoResta=obtenerResta(num1,num2);
+                resultadoMultiplicacion=obtenerMultiplicacion(num1,num2);
+                resultadoFactorial2=obtenerFactorial(num2);
+                resultadoDivision=obtenerDivision(num1,num2);
+                resultadoFactorial=obtenerFactorial(num1);
             }
             else
             {
@@ -83,11 +68,19 @@ int main()
         case 4://mostrar las respuestas de los calculos
             if(flagcalculos==1)//si no presiona la opcion 3, no se van a ejecutar ni se mostraran los calculos
             {
-                    printf("\n el resultado de la suma %.2f+%.2f es: %.2f",num1,num2,resultadoSuma);
-                    printf("\n el resultado de la resta %.2f-%.2f es: %.2f",num1,num2,resultadoResta);
-                    printf("\n el resultado de la multiplicacion %.2f*%.2f es: %f",num1,num2,resultadoMultiplicacion);
+                printf("\n el resultado de la suma %.2f+%.2f es: %.2f",num1,num2,resultadoSuma);
+                printf("\n el resultado de la resta %.2f-%.2f es: %.2f",num1,num2,resultadoResta);
+                printf("\n el resultado de la multiplicacion %.2f*%.2f es: %.2f",num1,num2,resultadoMultiplicacion);
+                if((num1>0)&&(num2>0))
+                {
                     printf("\n el resultado factorial de %.0f es: %d ",num1,resultadoFactorial);
-                    printf("y el resultado factorial de %.0f es: %d",num2,resultadoFactorial2);
+                    printf("\n y el resultado factorial de %.0f es: %d",num2,resultadoFactorial2);
+                    break;
+                }
+                else
+                {
+                    printf("\n ERROR, no se puede factorizar un numero si este es 0 o menor a 0");
+                }
                 if(num2!=0)
                 {
                     printf("\n el resultado de la division %.2f/%.2f es: %.2f",num1,num2,resultadoDivision);
@@ -113,7 +106,7 @@ int main()
         printf("\n");
         system("pause");
         system("cls");
-        //limpiar la pantalla despues de ejecutar una operacion
+        //limpiar la pantalla despues de ejecutar una opcion
     }
     while(opcion!=5); //ejecutar el programa hasta que se seleccione la opcion de salida (5)
     return 0;
