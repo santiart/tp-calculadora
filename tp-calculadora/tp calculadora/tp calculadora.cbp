@@ -31,29 +31,17 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="division.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="division.h" />
-		<Unit filename="factorial.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="factorial.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="multiplicacion.c">
+		<Unit filename="menu.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="multiplicacion.h" />
-		<Unit filename="resta.c">
+		<Unit filename="menu.h" />
+		<Unit filename="operaciones.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="resta.h" />
-		<Unit filename="suma.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="suma.h" />
+		<Unit filename="operaciones.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
